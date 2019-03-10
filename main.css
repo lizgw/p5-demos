@@ -1,42 +1,51 @@
+html {
+    height: 100%;
+}
+
 body {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
+    height: 100%;
 }
 
-.top {
-    background: #dfdfdf;
-    padding: 0.75rem 0rem;
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
-.top h1 {
+.sidebar {
+    background: #dfdfdf;
+    padding: 0.75rem 0.75rem;
+    height: 100%;
+}
+
+.sidebar h1 {
     margin: 0;
-    flex-grow: 1;
     text-align: center;
 }
 
-.top h2 {
-    flex-grow: 2;
+.sidebar h2 {
     text-align: center;
 }
 
-.top ul {
+.sidebar ul {
     margin: 0;
     padding: 0.75rem;
-    flex-grow: 1;
     text-align: center;
 }
 
-.top ul li {
+.sidebar ul li {
     display: inline-block;
     list-style: none;
     padding: 0 1rem;
 }
 
-.top a {
-    font-size: 1.25rem;
+.sidebar a {
+    font-size: 1rem;
+}
+
+.sidebar hr {
+    border: 1px solid #ffffff;
 }
