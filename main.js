@@ -12,6 +12,7 @@ var demoNames = [
     "10-custom-shape"
 ]
 var demoList = document.getElementById("demo-list");
+var demoFrame = document.getElementById("demo-iframe");
 
 for (demoName of demoNames) {
     // break apart the name on hyphens
