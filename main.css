@@ -16,7 +16,7 @@ body {
 }
 
 .sidebar {
-    background: #dfdfdf;
+    background: #f1f1f1;
     padding: 0.75rem 0.75rem;
     height: 100%;
     flex: 1 0 auto;
@@ -34,6 +34,7 @@ body {
 
 .sidebar h2 {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .navlinks {
@@ -50,14 +51,15 @@ body {
 
 .navlinks button {
     font-size: 1rem;
+    text-decoration: underline;
+    color: blue;
 }
 
 .sidebar hr {
-    border: 1px solid #ffffff;
+    border: 1px solid #e6e6e6;
 }
 
 #demo-holder {
-    background: #c9c9c9;
     padding: 1rem;
 }
 
