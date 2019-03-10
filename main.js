@@ -47,6 +47,7 @@ for (demoName of demoNames) {
 }
 
 aboutLink.addEventListener("mouseup", aboutLinkPressed);
+viewSourceLink.addEventListener("mouseup", viewSourceLinkPressed);
 
 function demoButtonPressed(event) {
     var fileName = event.target.demoName + ".html";
@@ -64,4 +65,15 @@ function aboutLinkPressed(event) {
     
     // reset the title
     demoTitle.innerText = "[no demo selected]";
+}
+
+function viewSourceLinkPressed(event) {
+    var baseLink = "https://github.com/lizgw/p5-demos/blob/master/";
+    var demoPath = demoFrame.getAttribute("src");
+
+    if (demoPath != "about:blank")
+    {
+        var fullPath = baseLink + demoPath;
+        window.open(fullPath, "_blank");
+    }
 }
