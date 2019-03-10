@@ -18,6 +18,7 @@ var demoFrame = document.getElementById("demo-iframe");
 var demoTitle = document.getElementById("demo-title");
 var aboutLink = document.getElementById("about-link");
 var viewSourceLink = document.getElementById("view-source-link");
+var newTabLink = document.getElementById("new-tab-link");
 
 for (demoName of demoNames) {
     // break apart the name on hyphens
@@ -48,6 +49,7 @@ for (demoName of demoNames) {
 
 aboutLink.addEventListener("mouseup", aboutLinkPressed);
 viewSourceLink.addEventListener("mouseup", viewSourceLinkPressed);
+newTabLink.addEventListener("mouseup", newTabLinkPressed);
 
 function demoButtonPressed(event) {
     var fileName = event.target.demoName + ".html";
@@ -75,5 +77,16 @@ function viewSourceLinkPressed(event) {
     {
         var fullPath = baseLink + demoPath;
         window.open(fullPath, "_blank");
+    }
+}
+
+function newTabLinkPressed(event) {
+    var currentPath = window.location;
+    var demoPath = demoFrame.getAttribute("src");
+
+    if (demoPath != "about:blank")
+    {
+        var fullPath = currentPath + demoPath;
+        window.open(demoPath, "_blank");
     }
 }

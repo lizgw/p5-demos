@@ -17,7 +17,7 @@ body {
 
 .sidebar {
     background: #f1f1f1;
-    padding: 0.75rem 0.75rem;
+    padding: 0.5rem;
     height: 100%;
     flex: 1 0 auto;
 }
@@ -39,14 +39,14 @@ body {
 
 .navlinks {
     margin: 0;
-    padding: 0.75rem;
+    padding: 0.5rem;
     text-align: center;
 }
 
 .navlinks li {
     display: inline-block;
     list-style: none;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 }
 
 .navlinks button {
@@ -60,7 +60,7 @@ body {
 }
 
 #demo-holder {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 #demo-list {
