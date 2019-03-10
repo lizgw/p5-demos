@@ -14,6 +14,8 @@ var demoNames = [
 var demoList = document.getElementById("demo-list");
 var demoFrame = document.getElementById("demo-iframe");
 var demoTitle = document.getElementById("demo-title");
+var aboutLink = document.getElementById("about-link");
+var viewSourceLink = document.getElementById("view-source-link");
 
 for (demoName of demoNames) {
     // break apart the name on hyphens
@@ -42,6 +44,8 @@ for (demoName of demoNames) {
     demoList.appendChild(listElem);
 }
 
+aboutLink.addEventListener("mouseup", aboutLinkPressed);
+
 function demoButtonPressed(event) {
     var fileName = event.target.demoName + ".html";
 
@@ -50,4 +54,12 @@ function demoButtonPressed(event) {
 
     // set the title
     demoTitle.innerText = event.target.innerText;
+}
+
+function aboutLinkPressed(event) {
+    // show the about page in the iframe
+    demoFrame.setAttribute("src", "about.html");
+    
+    // reset the title
+    demoTitle.innerText = "[no demo selected]";
 }
