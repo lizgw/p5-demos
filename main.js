@@ -13,6 +13,7 @@ var demoNames = [
 ]
 var demoList = document.getElementById("demo-list");
 var demoFrame = document.getElementById("demo-iframe");
+var demoTitle = document.getElementById("demo-title");
 
 for (demoName of demoNames) {
     // break apart the name on hyphens
@@ -43,5 +44,10 @@ for (demoName of demoNames) {
 
 function demoButtonPressed(event) {
     var fileName = event.target.demoName + ".html";
-    console.log(fileName);
+
+    // load file into iframe
+    demoFrame.setAttribute("src", fileName);
+
+    // set the title
+    demoTitle.innerText = event.target.innerText;
 }
