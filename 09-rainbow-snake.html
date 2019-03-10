@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>09 - rainbow snake</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        var xPos = 0;
+        var yPos = 0;
+        var shapeSize = 50;
+        var xMove = shapeSize;
+
+        var hueVal = 0;
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            hueVal = random(360);
+        }
+
+        function draw()
+        {
+            noStroke();
+            colorMode(HSB);
+            fill(color(hueVal, 150, 100));
+            hueVal = (hueVal + 1) % 360;
+
+            rect(xPos, yPos, shapeSize, shapeSize);
+
+            // update position
+            xPos += xMove;
+
+            // if at edge of screen
+            if (xPos > windowWidth + shapeSize || xPos < 0 - shapeSize)
+            {
+                xMove *= -1; // start moving the other way
+                yPos += shapeSize; // go down one row
+            }
+
+            // if it gets past the bottom of the screen
+            if (yPos > windowHeight + shapeSize)
+                noLoop(); // stop drawing!
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - full screen</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(window.innerWidth, window.innerHeight);
+        }
+
+        function draw()
+        {
+            var randRadius = Math.floor(Math.random() * 25) + 25;
+
+            ellipse(mouseX, mouseY, randRadius, randRadius);
+        }
+    
+    </script>
+</body>
+</html>

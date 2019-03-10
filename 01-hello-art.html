@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Hello Art</title>
+    <script src="p5.js"></script>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(640, 480);
+        }
+
+        function draw()
+        {
+            if (mouseIsPressed)
+            {
+                fill(0);
+            }
+            else
+            {
+                fill(255);
+            }
+
+            ellipse(mouseX, mouseY, 80, 80);
+        }
+    
+    </script>
+</body>
+</html>

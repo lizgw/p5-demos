@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - random lines</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            noLoop();
+        }
+
+        function draw()
+        {
+            const maxLineWidth = 10;
+            const numLines = 100;
+            for (var i = 0; i < numLines; i++)
+            {
+                var startY = random(windowHeight);
+                var endY = random(windowHeight);
+                var lineWidth = random(maxLineWidth);
+
+                strokeWeight(lineWidth);
+                line(0, startY, windowWidth, endY);
+            }
+        }
+    
+    </script>
+</body>
+</html>

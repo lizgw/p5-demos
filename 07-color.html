@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>07 - color</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+        }
+
+        function draw()
+        {
+            var r = random(255);
+            var g = random(255);
+            var b = random(255);
+
+            var c = color(r, g, b);
+            fill(c);
+            stroke("white");
+
+            var randX = random(windowWidth);
+            var randY = random(windowHeight);
+            rect(randX, randY, 50, 50);
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>05 - random triangles</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            noLoop();
+        }
+
+        function draw()
+        {
+            const numTriangles = 50;
+
+            for (var i = 0; i < numTriangles; i++)
+            {
+                var x1 = random(windowWidth);
+                var x2 = random(windowWidth);
+                var x3 = random(windowWidth);
+
+                var y1 = random(windowHeight);
+                var y2 = random(windowHeight);
+                var y3 = random(windowHeight);
+
+                triangle(x1, y1, x2, y2, x3, y3);
+            }
+        }
+    
+    </script>
+</body>
+</html>

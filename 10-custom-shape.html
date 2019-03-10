@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10 - custom shapes</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            //noLoop();
+        }
+
+        function draw()
+        {
+            var maxDiff = random(50) + 25;
+            var minDiff = 25;
+
+            var x1 = random(windowWidth);
+            var y1 = random(windowHeight);
+
+            var x2 = x1 + random(maxDiff - minDiff) + 25;
+            var y2 = y1 + random(maxDiff - minDiff) + 25;
+
+            var x3 = x2 + random(maxDiff - minDiff) + 25;
+            var y3 = y2 + random(maxDiff - minDiff) + 25;
+
+            var x4 = x3 + random(maxDiff - minDiff) + 25;
+            var y4 = y3 + random(maxDiff - minDiff) + 25;
+
+            var x5 = x4 + random(maxDiff - minDiff) + 25;
+            var y5 = y4 + random(maxDiff - minDiff) + 25;
+
+            angleMode(DEGREES);
+            var rot = random(360);
+            rotate(rot);
+
+            beginShape();
+            vertex(x1, y1);
+            vertex(x2, y2);
+            vertex(x3, y3);
+            vertex(x4, y4);
+            //vertex(x5, y5);
+            endShape(CLOSE);
+
+            
+        }
+    
+    </script>
+</body>
+</html>

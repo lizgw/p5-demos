@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>04 - triangles</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            noLoop();
+        }
+
+        function draw()
+        {
+            const numTriangles = 50;
+            const minSize = 25;
+            const maxSize = 75;
+
+            for (var i = 0; i < numTriangles; i++)
+            {
+                var x1 = random(windowWidth);
+                var x2 = x1;
+                var x3 = x1 + random(maxSize - minSize) + minSize;
+
+                var y1 = random(windowHeight);
+                var y2 = y1 + random(maxSize - minSize) + minSize;
+                var y3 = y1;
+
+                triangle(x1, y1, x2, y2, x3, y3);
+            }
+        }
+    
+    </script>
+</body>
+</html>

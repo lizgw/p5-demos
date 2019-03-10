@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>08 - color hue</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        var hueVal = 0;
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+        }
+
+        function draw()
+        {
+            colorMode(HSB);
+
+            var c = color(hueVal, 50, 100);
+            hueVal = (hueVal + 1) % 360;
+
+            fill(c);
+            noStroke();
+
+            ellipse(mouseX, mouseY, 75, 75);
+        }
+    
+    </script>
+</body>
+</html>
