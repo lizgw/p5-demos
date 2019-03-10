@@ -9,7 +9,9 @@ var demoNames = [
     "07-color",
     "08-color-hue",
     "09-rainbow-snake",
-    "10-custom-shape"
+    "10-custom-shape",
+    "11-rainbow-rectangles",
+    "12-lerp-rectangles"
 ]
 var demoList = document.getElementById("demo-list");
 var demoFrame = document.getElementById("demo-iframe");
