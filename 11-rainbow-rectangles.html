@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>11 - rainbow rectangles</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        var hueStep = 10;
+        var numRects = 8;
+        var xPos = 0;
+    
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            noLoop();
+        }
+
+        function draw()
+        {
+            colorMode(HSB);
+
+            var rectWidth = windowWidth / numRects;
+
+            var colorHue = random(360);
+            fill(color(colorHue, 50, 100));
+            noStroke();
+
+            for (var i = 0; i < numRects; i++)
+            {
+                rect(xPos, 0, rectWidth, windowHeight);
+
+                xPos += rectWidth;
+                colorHue = (colorHue + hueStep) % 360;
+                fill(color(colorHue, 50, 100));
+            }
+        }
+    
+    </script>
+</body>
+</html>
