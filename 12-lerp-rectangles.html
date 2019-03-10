@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12 - lerp rectangles</title>
+    <script src="p5.js"></script>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        function setup()
+        {
+            createCanvas(windowWidth, windowHeight);
+            noLoop();
+        }
+
+        function draw()
+        {
+            var numRects = 15;
+            var rectWidth = windowWidth / numRects;
+            var xPos = 0;
+            var lerpAmount = 1 / numRects;
+
+            colorMode(HSB);
+            noStroke();
+
+            var startColor = color(random(360), random(100), random(100));
+            var endColor = color(random(360), random(100), random(100));
+            var currentColor = startColor;
+
+            for (var i = 0; i < numRects; i++)
+            {
+                fill(currentColor);
+                rect(xPos, 0, rectWidth, windowHeight);
+
+                xPos += rectWidth;
+                // if the next loop is the last one
+                if (i == numRects - 2)
+                    // make sure we use the original end color
+                    currentColor = endColor;
+                else
+                    // lerp the next color
+                    currentColor = lerpColor(startColor, endColor, lerpAmount * (i + 1));
+            }
+        }
+    
+    </script>
+</body>
+</html>
